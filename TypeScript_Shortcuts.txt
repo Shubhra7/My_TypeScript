@@ -1,0 +1,8 @@
+1. TypeScript is just a developer tool, which wraps over the JavaScript
+2. typescriptlang.org ===> Playground, config
+
+3. not int or float... all treated as ===> number
+4. types==> string, number, Boolean
+
+5. Type aliases
+   https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-aliases
