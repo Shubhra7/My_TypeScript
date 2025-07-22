@@ -24,6 +24,7 @@ createUser(newUser) // extra element accepted by passing varaible
 // creating data type first then do
 // type Alias
 
+/*
 type User = {
     name: string;
     email: string;
@@ -34,7 +35,42 @@ function createUsers(user: User):User{
     return {name: "",email: "", isActive: true}
 }
 
-createUsers({name: "",email: "", isActive: true})
+createUsers({name: "",email: "", isActive: true}) 
+*/
+
+
+// ReadOnly and Optional(?)
+type User = {
+    readonly _id: string
+    name: string
+    email: string
+    isActive: boolean
+    creditCardDetails ?: number // ? = optional
+}
+
+let myUser: User ={
+    _id: "123",
+    name: "Bubai",
+    email: "b@b.com",
+    isActive: false
+}
+
+// myUser._id ="1233"  // not allowed as ready only 
+myUser.name= "Kalu"
+
+// mixing of Types
+
+type cardNumber = {
+    cardnumber: string
+}
+
+type cardDate = {
+    cardDate: string
+}
+
+type cardDetails = cardNumber & cardDate & {
+    cvv: string
+}
 
 
 
