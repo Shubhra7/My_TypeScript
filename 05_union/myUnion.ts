@@ -52,3 +52,5 @@ let seatAllotment: "aisle" | "middle" | "window"
 
 seatAllotment = "aisle"
 // seatAllotment = "crew" // not allowed
+
+export {}
