@@ -1,4 +1,5 @@
 // enum used for key-pair value getting 
+// Enums allow a developer to define a set of named constants. 
 
 enum SeatChoice { 
     AISLE="aisle",
