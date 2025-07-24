@@ -50,3 +50,38 @@ function isAdminAccount(account: User | Admin){
         return account.isAdmin
     }
 }
+
+
+// seen: 5 (when primitive data type)
+
+function logValue(x: Date | string){
+    if(x instanceof Date){
+        console.log(x.toUTCString());        
+    } else {
+        console.log(x.toUpperCase());
+        
+    }
+}
+
+
+// seen: 6 (very tricky)
+// https://youtu.be/30LWjhZzg50?t=16087
+
+type Fish = {swim: ()=> void}
+type Bird = {fly: ()=> void}
+
+//checking isFish by doing typecasting and check have or not ***** then make return type casted
+function isFish(pet: Fish | Bird): pet is Fish{
+    return (pet as Fish).swim !== undefined
+}
+
+
+function getFood(pet: Fish | Bird){
+    if( isFish(pet)){
+        pet
+        return "fish food"
+    }else{
+        pet
+        return "Bird food"
+    }
+}

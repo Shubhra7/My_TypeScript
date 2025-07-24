@@ -32,3 +32,26 @@ function isAdminAccount(account) {
         return account.isAdmin;
     }
 }
+// seen: 5 (when primitive data type)
+function logValue(x) {
+    if (x instanceof Date) {
+        console.log(x.toUTCString());
+    }
+    else {
+        console.log(x.toUpperCase());
+    }
+}
+//checking isFish by doing typecasting and check have or not ***** then make return type casted
+function isFish(pet) {
+    return pet.swim !== undefined;
+}
+function getFood(pet) {
+    if (isFish(pet)) {
+        pet;
+        return "fish food";
+    }
+    else {
+        pet;
+        return "Bird food";
+    }
+}
