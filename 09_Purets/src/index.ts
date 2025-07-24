@@ -10,7 +10,7 @@
 
 class User {
 
-    private _courseCount = 1
+    protected _courseCount = 1  //same class and inherted class get this access
 
     readonly city: string = "Kolkata"
     // special type of consturtor without inital vairable for typescript
@@ -42,6 +42,13 @@ class User {
             throw new Error("Course count less than 1")
         }
         this._courseCount = courseNum
+    }
+}
+
+class SubUser extends User{
+    isFamily: boolean = true
+    changeCourseCount(){
+        this._courseCount=4
     }
 }
 

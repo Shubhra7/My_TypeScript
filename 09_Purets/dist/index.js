@@ -14,7 +14,7 @@ class User {
         this.email = email;
         this.name = name;
         this.userID = userID;
-        this._courseCount = 1;
+        this._courseCount = 1; //same class and inherted class get this access
         this.city = "Kolkata";
     }
     // private method
@@ -34,6 +34,15 @@ class User {
             throw new Error("Course count less than 1");
         }
         this._courseCount = courseNum;
+    }
+}
+class SubUser extends User {
+    constructor() {
+        super(...arguments);
+        this.isFamily = true;
+    }
+    changeCourseCount() {
+        this._courseCount = 4;
     }
 }
 const Bubai = new User("Bubai@g.com", "kalu", 123);
