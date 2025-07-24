@@ -9,11 +9,31 @@
 //     }
 // }
 class User {
+    // special type of consturtor without inital vairable for typescript
     constructor(email, name, userID) {
         this.email = email;
         this.name = name;
         this.userID = userID;
+        this._courseCount = 1;
         this.city = "Kolkata";
+    }
+    // private method
+    deleteToken() {
+        console.log("Token deleted");
+    }
+    // getter
+    get getAppleEmail() {
+        return `apple {this.email}`;
+    }
+    get courseCount() {
+        return this._courseCount;
+    }
+    // setter
+    set courseCount(courseNum) {
+        if (courseNum <= 1) {
+            throw new Error("Course count less than 1");
+        }
+        this._courseCount = courseNum;
     }
 }
 const Bubai = new User("Bubai@g.com", "kalu", 123);
