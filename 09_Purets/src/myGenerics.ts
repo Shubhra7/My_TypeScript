@@ -33,3 +33,22 @@ interface Bootle{
 
 indentityFour<Bootle>({brand:"Milton", type:12})
 
+
+
+// second version start as generics with arrow functions
+
+
+function getSearcProducts<T,>(products: T[]): T{
+    // do some database operations
+    const myIndex = 3
+    return products[2]
+}
+
+
+// upper function arrow function technique
+
+const getMoreSearchProducts = <T>(products: T[]): T=>{
+    // do some database operations
+    return products[0]
+}
+
