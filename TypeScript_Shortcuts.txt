@@ -9,7 +9,7 @@
 
 6. Production TypeScript setup (09_Purest)
 	[setup like if you write the ts code and the converted js code will be placed in the right place and connect that js code with your index.html]
-   a. tsc --init
+   a. tsc --init   node i -y
    b. npm i lite-server
    c. change the start in package.json
    d. change tsconfig.json ==> "outDir": "./dist",   (as the compiled js code will store there) 
