@@ -1,3 +1,5 @@
+// main moto of narrowing is ==> come to know which type it is
+
 // seen:1
 function detectType(val: number | string){
     if(typeof val === "string"){
@@ -52,7 +54,7 @@ function isAdminAccount(account: User | Admin){
 }
 
 
-// seen: 5 (when primitive data type)
+// seen: 5 (when primitive data type) [checking by instanceof ]
 
 function logValue(x: Date | string){
     if(x instanceof Date){
@@ -64,7 +66,7 @@ function logValue(x: Date | string){
 }
 
 
-// seen: 6 (very tricky)
+// seen: 6  (very tricky) [checking by type casting]
 // https://youtu.be/30LWjhZzg50?t=16087
 
 type Fish = {swim: ()=> void}
@@ -83,5 +85,48 @@ function getFood(pet: Fish | Bird){
     }else{
         pet
         return "Bird food"
+    }
+}
+
+
+// seen: 7  (checking by adding Kind parameter of type/interface)
+interface Circle {
+    kind: "circle",
+    radius: number
+}
+
+interface Square {
+    kind: "square",
+    side: number
+}
+
+interface Rectangle {
+    kind: "rectangle",
+    lenght: number,
+    width: number
+}
+
+type Shape = Circle | Square
+
+function getTrueShape(shape: Shape){
+    if(shape.kind === "circle"){
+        return Math.PI * shape.radius ** 2
+    }
+    return shape.side * shape.side
+}
+
+// very usable when multiple type have
+function getArea(shape: Shape){
+    switch(shape.kind){
+        case "circle":
+            return Math.PI * shape.radius ** 2
+
+        case "square":
+            return shape.side * shape.side
+
+        default:
+            const _defaultforshape: never = shape //never to check unhandled type rather than "any"
+            return _defaultforshape
+
     }
 }

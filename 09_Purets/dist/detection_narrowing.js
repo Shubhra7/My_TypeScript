@@ -1,4 +1,5 @@
 "use strict";
+// main moto of narrowing is ==> come to know which type it is
 // seen:1
 function detectType(val) {
     if (typeof val === "string") {
@@ -32,7 +33,7 @@ function isAdminAccount(account) {
         return account.isAdmin;
     }
 }
-// seen: 5 (when primitive data type)
+// seen: 5 (when primitive data type) [checking by instanceof ]
 function logValue(x) {
     if (x instanceof Date) {
         console.log(x.toUTCString());
@@ -53,5 +54,23 @@ function getFood(pet) {
     else {
         pet;
         return "Bird food";
+    }
+}
+function getTrueShape(shape) {
+    if (shape.kind === "circle") {
+        return Math.PI * shape.radius ** 2;
+    }
+    return shape.side * shape.side;
+}
+// very usable when multiple type have
+function getArea(shape) {
+    switch (shape.kind) {
+        case "circle":
+            return Math.PI * shape.radius ** 2;
+        case "square":
+            return shape.side * shape.side;
+        default:
+            const _defaultforshape = shape; //never to check unhandled type rather than "any"
+            return _defaultforshape;
     }
 }
