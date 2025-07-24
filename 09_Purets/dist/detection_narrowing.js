@@ -27,3 +27,8 @@ function printAll(strs) {
         }
     }
 }
+function isAdminAccount(account) {
+    if ("isAdmin" in account) { //important checking...tricky
+        return account.isAdmin;
+    }
+}

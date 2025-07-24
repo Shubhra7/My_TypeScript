@@ -29,3 +29,24 @@ function printAll(strs: string | string[] | null){
         }
     }
 }
+
+
+
+// seen:4 **** Very tricky ***  [in operator in narrow]
+
+interface User {
+    name: string,
+    email: string
+}
+
+interface Admin{
+    name: string,
+    email: string,
+    isAdmin: boolean
+}
+
+function isAdminAccount(account: User | Admin){
+    if ("isAdmin" in account) {  //important checking...tricky
+        return account.isAdmin
+    }
+}
