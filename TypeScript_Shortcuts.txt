@@ -6,3 +6,12 @@
 
 5. Type aliases
    https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-aliases
+
+6. Production TypeScript setup (09_Purest)
+	[setup like if you write the ts code and the converted js code will be placed in the right place and connect that js code with your index.html]
+   a. tsc --init
+   b. npm i lite-server
+   c. change the start in package.json
+   d. change tsconfig.json ==> "outDir": "./dist",   (as the compiled js code will store there) 
+  
+d. Or else the live Server extension 
