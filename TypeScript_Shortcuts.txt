@@ -15,3 +15,6 @@
    d. change tsconfig.json ==> "outDir": "./dist",   (as the compiled js code will store there) 
   
 d. Or else the live Server extension 
+
+
+7. tsc -w (watch mode) ==> same like nodemon ==> every changes will generated and saved in js file
