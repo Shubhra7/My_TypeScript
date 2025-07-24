@@ -13,7 +13,8 @@ class Instagram implements TakePhoto{
         public cameraMode: string,
         public filter: string,
         public burst: number
-    ){}
+    ){
+    }
 }
 
 class Youtube implements TakePhoto, Story{
