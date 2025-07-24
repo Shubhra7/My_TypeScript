@@ -32,3 +32,22 @@ const getMoreSearchProducts = (products) => {
     // do some database operations
     return products[0];
 };
+function anotherFunction(valOne, valTwo) {
+    return {
+        valOne,
+        valTwo
+    };
+}
+anotherFunction(3, {
+    connection: "Mongo",
+    username: "Kalu",
+    password: "123"
+});
+class Sellable {
+    constructor() {
+        this.cart = [];
+    }
+    addToCart(product) {
+        this.cart.push(product);
+    }
+}
