@@ -51,8 +51,20 @@ function addy(num1, num2, ...num3) {
 }
 const ans = addy(2, 3, 5, 6, 7, 8);
 // Genric
-function getItems(item) {
-    return new Array().concat(item);
+function getItems(items) {
+    // return new Array<Type>().concat(items);
+    return [...items];
 }
 let concatResult = getItems([1, 2, 3]);
+let concatResults = getItems(["1", "2", "3"]);
 console.log(concatResult);
+console.log(concatResults);
+// Classes
+class student {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+const jon = new student("Jhon", 2);
+console.log(jon);

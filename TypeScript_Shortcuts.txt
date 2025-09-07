@@ -18,3 +18,18 @@ d. Or else the live Server extension
 
 
 7. tsc -w (watch mode) ==> same like nodemon ==> every changes will generated and saved in js file
+
+
+
+8. 
+	**** TypeScript short hand constructor trick without this.name=name ****
+// Classes
+class student{
+    constructor(
+        public name: string,
+        public age: number,
+    ){}
+}
+
+const jon = new student("Jhon",2)
+console.log(jon);

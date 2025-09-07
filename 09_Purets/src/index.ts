@@ -64,13 +64,30 @@ const ans = addy(2,3,5,6,7,8)
 
 // Genric
 
-function getItems<Type>(item: Type[]): Type[]{
-    return new Array<Type>().concat(item);
+function getItems<Type>(items: Type[]): Type[]{
+    // return new Array<Type>().concat(items);
+    return [...items]
 }
 
 let concatResult = getItems<number>([1,2,3]);
+let concatResults = getItems<string>(["1","2","3"]);
 
 console.log(concatResult);
+console.log(concatResults);
+
+
+// Classes
+class student{
+    constructor(
+        public name: string,
+        public age: number,
+    ){}
+}
+
+const jon = new student("Jhon",2)
+
+console.log(jon);
+
 
 
 
