@@ -101,5 +101,22 @@ console.log(jon);
 console.log(ram);
 
 
+interface UserType{
+    name: string;
+    age: number;
+    id: number;
+    email: string;
+}
+
+let user: UserType = {name:"John",age: 2,id: 1,email: ""}
+
+type UserType2{
+    name: string;
+    age: number;
+}
+
+let user2:UserType2 = {name: "Johhny",age:3}
+
+
 
 

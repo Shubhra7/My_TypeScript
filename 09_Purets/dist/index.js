@@ -78,3 +78,5 @@ const jon = new student("Jhon", 2);
 const ram = new captain("Ram", 3, 3);
 console.log(jon);
 console.log(ram);
+let user = { name: "John", age: 2, id: 1, email: "" };
+let user2 = { name: "Johhny", age: 3 };
