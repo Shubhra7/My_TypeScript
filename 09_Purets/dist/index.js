@@ -42,7 +42,7 @@ class SubUser extends User {
         this.isFamily = true;
     }
     changeCourseCount() {
-        this._courseCount = 4;
+        this._courseCount = 45;
     }
 }
 const Bubai = new User("Bubai@g.com", "kalu", 123);
