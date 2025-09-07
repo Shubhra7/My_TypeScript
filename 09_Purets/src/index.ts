@@ -60,3 +60,17 @@ function addy(num1:number, num2:number, ...num3:number[] ):number {
 }
 
 const ans = addy(2,3,5,6,7,8)
+
+
+// Genric
+
+function getItems<Type>(item: Type[]): Type[]{
+    return new Array<Type>().concat(item);
+}
+
+let concatResult = getItems<number>([1,2,3]);
+
+console.log(concatResult);
+
+
+

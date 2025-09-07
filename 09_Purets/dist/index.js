@@ -50,3 +50,9 @@ function addy(num1, num2, ...num3) {
     return num1 + num2 + num3.reduce((acc, curr) => acc + curr, 0);
 }
 const ans = addy(2, 3, 5, 6, 7, 8);
+// Genric
+function getItems(item) {
+    return new Array().concat(item);
+}
+let concatResult = getItems([1, 2, 3]);
+console.log(concatResult);
