@@ -79,4 +79,6 @@ const ram = new captain("Ram", 3, 3);
 console.log(jon);
 console.log(ram);
 let user = { name: "John", age: 2, id: 1, email: "" };
+let user3 = { name: "John", age: 2, id: 1, email: "", rate: 4 };
 let user2 = { name: "Johhny", age: 3 };
+let user5 = { name: "hehe", age: 34, phone: 456 };

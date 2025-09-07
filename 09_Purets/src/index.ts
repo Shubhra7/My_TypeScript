@@ -108,14 +108,26 @@ interface UserType{
     email: string;
 }
 
-let user: UserType = {name:"John",age: 2,id: 1,email: ""}
+interface stud extends UserType{
+    rate: number
+}
 
-type UserType2{
+let user: UserType = {name:"John",age: 2,id: 1,email: ""}
+let user3:stud = {name:"John",age: 2,id: 1,email: "",rate: 4}
+
+
+
+
+type UserType2 = {
     name: string;
     age: number;
 }
 
+type emp = UserType2 & {phone: number}
+
+
 let user2:UserType2 = {name: "Johhny",age:3}
+let user5: emp = {name:"hehe", age: 34, phone: 456}
 
 
 
