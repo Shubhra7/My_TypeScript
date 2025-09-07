@@ -66,5 +66,15 @@ class student {
         this.age = age;
     }
 }
+class captain extends student {
+    constructor(name, age, roll) {
+        super(name, age);
+        this.name = name;
+        this.age = age;
+        this.roll = roll;
+    }
+}
 const jon = new student("Jhon", 2);
+const ram = new captain("Ram", 3, 3);
 console.log(jon);
+console.log(ram);

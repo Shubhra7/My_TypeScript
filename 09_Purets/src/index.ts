@@ -84,9 +84,21 @@ class student{
     ){}
 }
 
+class captain extends student{
+    constructor(
+        public name:string,
+        public age: number,
+        public roll:number
+    ){
+        super(name,age)
+    }
+}
+
 const jon = new student("Jhon",2)
+const ram = new captain("Ram",3,3)
 
 console.log(jon);
+console.log(ram);
 
 
 
