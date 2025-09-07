@@ -53,3 +53,10 @@ class SubUser extends User{
 }
 
 const Bubai = new User("Bubai@g.com","kalu",123)
+
+
+function addy(num1:number, num2:number, ...num3:number[] ):number {
+    return num1 + num2 + num3.reduce((acc,curr)=>acc+curr,0)
+}
+
+const ans = addy(2,3,5,6,7,8)
